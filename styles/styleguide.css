@@ -1,0 +1,25 @@
+@font-face {
+    font-family: freight-text-pro;
+    src: url(../assets/fonts/2CDFA8_0_0-dd704242fc957c5c311f96fb3b9a1bf4.woff2);
+}
+
+@font-face {
+    font-family: proxima-nova-3;
+    src: url(../assets/fonts/2F3AD3_8_0-e835dd5dc9e570f8f3982d53fb740851.woff2);
+}
+
+@font-face {
+    font-family: proxima-nova;
+    src: url(../assets/fonts/reg-soundslice-209171069724eaab56cf6f1203e2956e.woff2);
+}
+
+@font-face {
+    font-family: proxima-nova-2;
+    src: url(../assets/fonts/semibold-subset.woff2);
+}
+
+:root {
+    --color-primary: #f2725f;
+    --color-secondary: #43444e;
+    --color-active: rgb(240.0838150289,93.2167630058,71.4161849711);
+}
