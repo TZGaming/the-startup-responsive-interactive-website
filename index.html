@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing - Soundslice</title>
+    <title>ASCII Converter - Soundslice</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/styleguide.css">
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="assets/svg/square-light-11852e267c30000bf63ef60def1fef5e.svg">
+    <script src="scripts/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,9 +22,24 @@
 
             <ul class="header-second">
                 <li><a>Log in</a></li>
-                <li><a class="register-but">Sign up</a></li>
+                <li><a class="primary-button">Sign up</a></li>
             </ul>
         </nav>
     </header>
+
+    <main>
+        <div class="converter-container">
+            <h1>Test for yourself: ASCII to sheet music</h1>
+            <div class="converter-box">
+                    <textarea class="hidden-field"></textarea>
+                    <textarea class="input-field"></textarea>
+                    <a class="primary-button convert-btn" style="width: 50px;" >Convert</a>
+                <div class="notebar-container">
+                    <img src="assets/template_music_bar/no_notes.png">
+                    <a class="primary-button" style="width: 100px;">Save to account</a>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

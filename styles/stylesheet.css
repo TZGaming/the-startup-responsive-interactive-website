@@ -22,4 +22,26 @@
     --color-primary: #f2725f;
     --color-secondary: #43444e;
     --color-active: rgb(240.0838150289,93.2167630058,71.4161849711);
+    --color-background: white;
+}
+
+.primary-button {
+    border: 1px solid;
+    border-radius: 5px;
+    color: var(--color-primary);
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.15s ease;
+}
+
+.primary-button:hover {
+    background-color: var(--color-active);
+    cursor: pointer;
+    color: var(--color-background);
+    scale: 1.1;
 }

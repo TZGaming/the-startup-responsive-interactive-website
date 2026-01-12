@@ -44,17 +44,100 @@ nav {
 }
 
 .header-second {
-    font-weight: bold;
     font-size: 14px;
     margin-right: 3px;
 }
 
-a {
-    &.register-but {
-        border: 1px solid;
-        border-radius: 5px;
-        color: var(--color-primary);
-        padding: 6px;
-        background-color: rgba(255, 255, 255, 0);
+h1 {
+    font-size: clamp(1.25rem, 5vw, 2rem);
+    color: var(--color-secondary);
+}
+
+main {
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.converter-container {
+    img {
+        margin-top: 40px;
+        margin-bottom: 10px;
+        margin-left: -5px;
+        max-width: 500px;
+        @media screen and (max-width: 700px) {
+            max-width: 95vw;
+            margin-left: 0px;
+        }
     }
+}
+
+.converter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+        @media screen and (max-width: 700px) {
+            margin: 0;
+        }
+}
+
+textarea {
+    max-width: 480px; 
+    min-height: 120px;
+    border: 2px rgba(0, 0, 0, 0.35) solid;
+    resize: none;
+    border-radius: 5px;
+    @media screen and (max-width: 700px) {
+        max-width: 95vw; 
+        min-height: 120px;
+    }
+}
+
+textarea:focus {
+    outline: none;
+    border: 2px solid var(--color-active);
+}
+
+.hidden-field {
+    display: none;
+}
+
+.unhidden-field {
+    display: static;
+    max-width: 480px; 
+    min-height: 120px;
+    border: 2px rgba(0, 0, 0, 0.35) solid;
+    resize: none;
+    border-radius: 5px;
+    pointer-events: none;
+    @media screen and (max-width: 700px) {
+        max-width: 95vw; 
+        min-height: 120px;
+    }
+}
+
+.input-field {
+    position: static;
+}
+
+.input-moving {
+    animation-name: move-text;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-out;
+    position: fixed;
+    border: 2px rgba(0, 0, 0, 0) solid;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 5px;
+}
+
+@keyframes move-text {
+    0% { margin-left: 0px; margin-top: 0px; opacity: 100%;}
+    40% { margin-left: 100px; }
+    100% { margin-left: 100px; margin-top: 220px; opacity: 0%;}
+}
+
+.notebar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
