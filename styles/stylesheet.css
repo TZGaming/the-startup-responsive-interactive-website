@@ -21,7 +21,8 @@
 :root {
     --color-primary: #f2725f;
     --color-secondary: #43444e;
-    --color-active: rgb(240.0838150289,93.2167630058,71.4161849711);
+    --color-active: rgba(240, 94, 71);
+    --color-active-alt: rgb(255, 242, 240);
     --color-background: white;
 }
 
