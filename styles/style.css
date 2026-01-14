@@ -123,6 +123,11 @@ nav {
 .header-second {
     font-size: 14px;
     margin-right: 3px;
+    li.Login {
+        @media screen and (max-width: 335px) {    
+            display: none;    
+        }    
+    }
 }
 
 h1 {
