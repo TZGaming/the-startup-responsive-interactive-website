@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASCII Converter - Soundslice</title>
+    <title>Login - Soundslice</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/stylesheet.css">
     <link rel="icon" type="image/x-icon" href="https://d2c3nvafyekx5z.cloudfront.net/images/favicon-svg-883c46c4fec20e659dd479f0783c2c6a.svg">
-    <script src="scripts/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -61,18 +60,28 @@
     </header>
 
     <main>
-        <div class="converter-container">
-            <h1>Test for yourself: ASCII to sheet music</h1>
-            <div class="converter-box">
-                    <textarea class="hidden-field"></textarea>
-                    <textarea class="input-field"></textarea>
-                    <a class="primary-button convert-btn" style="width: 50px;" >Convert</a>
-                <div class="notebar-container">
-                    <img src="assets/template_music_bar/no_notes.png" alt="Music bar">
-                    <a class="primary-button" style="width: 100px;">Save to account</a>
-                </div>
-            </div>
-        </div>
+        <article>
+            <form class="login-container">
+            <h1>Log in</h1>
+                <label for="email">E-mail adress:</label>
+                    <input name="email" type="email" required>
+
+                <label for="password">Password:</label>
+                    <input name="password" type="password" required>
+
+                <button class="primary-button" type="submit">Inloggen</button>
+            </form>
+        </article>
     </main>
 </body>
+
+<script>
+    let sideBar = document.querySelector('.side-bar');
+    let hamburger = document.querySelector('.hamburger-icon');
+
+    hamburger.addEventListener('click', function () {
+    sideBar.classList.toggle('open');
+    hamburger.classList.toggle('open');
+    });
+</script>
 </html>
