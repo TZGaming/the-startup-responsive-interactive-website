@@ -1,6 +1,15 @@
 let inputfield = document.querySelector('.input-field');
 let hiddenfield = document.querySelector('.hidden-field');
 let convertBtn = document.querySelector('.convert-btn');
+let musicImg = document.querySelector('.notebar-container img');
+
+const noteImages = [
+    'assets/template_music_bar/with_notes1.png',
+    'assets/template_music_bar/with_notes2.png',
+    'assets/template_music_bar/with_notes3.png'
+];
+
+let lastImage = null;
 
 convertBtn.addEventListener('click', function () {
     if (inputfield.value.trim() === '') return;
@@ -12,10 +21,19 @@ convertBtn.addEventListener('click', function () {
 inputfield.addEventListener('animationend', function () {
     inputfield.classList.remove('input-moving');
     hiddenfield.classList.replace('unhidden-field', 'hidden-field');
-
     inputfield.value = '';
-});
 
+    setTimeout(() => {
+        let newImage;
+
+        do {
+            newImage = noteImages[Math.floor(Math.random() * noteImages.length)];
+        } while (newImage === lastImage);
+
+        musicImg.src = newImage;
+        lastImage = newImage;
+    }, 100);
+});
 
 let sideBar = document.querySelector('.side-bar');
 let hamburger = document.querySelector('.hamburger-icon');
