@@ -1,6 +1,13 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
     font-family: "proxima-nova", helvetica, arial, sans-serif;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -142,14 +149,25 @@ main {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    flex: 1;
+    @media screen and (min-width: 992px) {
+        align-items: center;
+    }
 }
 
-.converter-container {
-    @media screen and (max-width: 700px) {
-        -webkit-tap-highlight-color: transparent;
+.converter-desktop-layout {
+    @media screen and (min-width: 992px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 50px;
+        align-items: center;
     }
-    
+
+}
+
+.converter-container {  
     img {
         margin-top: 40px;
         margin-bottom: 10px;
@@ -166,7 +184,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 10px;
+    margin: 10px;       
         @media screen and (max-width: 700px) {
             margin: 0;
         }
@@ -212,7 +230,14 @@ textarea:focus {
 }
 
 .input-moving {
-    animation-name: move-text;
+    @media screen and (max-width: 700px) {
+        animation-name: move-text-mobile;
+    }
+
+    @media screen and (min-width: 992px) {
+    animation-name: move-text-desktop;
+    }
+
     animation-duration: 0.75s;
     animation-timing-function: ease-out;
     position: fixed;
@@ -221,10 +246,15 @@ textarea:focus {
     border-radius: 5px;
 }
 
-@keyframes move-text {
-    0% { margin-left: 0px; margin-top: 0px; opacity: 100%;}
-    40% { margin-left: 100px; }
-    100% { margin-left: 100px; margin-top: 220px; opacity: 0%;}
+@keyframes move-text-mobile {
+    0% { margin-left: 0px; margin-top: 70px; opacity: 100%;}
+    40% { margin-left: 150px; }
+    100% { margin-left: 150px; margin-top: 280px; opacity: 0%;}
+}
+
+@keyframes move-text-desktop {
+    0% { margin-left: 0px; margin-top: 92px; opacity: 100%;}
+    100% { margin-left: 700px; margin-top: 130px; opacity: 0%;}
 }
 
 .primary-button.click {
@@ -243,6 +273,9 @@ textarea:focus {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    @media screen and (min-width: 992px) {
+        margin-top: 50px;
+    }
 }
 
 form {
@@ -297,10 +330,28 @@ footer {
     justify-content: space-evenly;
     flex-direction: row;
     gap: 20px;
-    margin-bottom: 40px;
+    
+    @media screen and (min-width: 992px) {
+        padding-bottom: 50px;
+    }
+
+    @media screen and (max-width: 700px) {
+        padding-bottom: 20px;
+    }
+        a {
+            text-decoration: none;
+            color: grey;
+            transition: all .15s;
+        }
+
+        a:hover {
+            color: var(--color-active);
+        }
+
         @media screen and (max-width: 700px) {
             flex-direction: column;
         }
+
     ul {
         display: flex;
         flex-direction: column;

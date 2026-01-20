@@ -32,7 +32,7 @@ inputfield.addEventListener('animationend', function () {
 
         musicImg.src = newImage;
         lastImage = newImage;
-    }, 100);
+    }, 0);
 });
 
 let sideBar = document.querySelector('.side-bar');
